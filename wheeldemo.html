@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Wheel demo</title>
+	<style type="text/css">
+		* {
+			margin: 0; padding: 0;
+		}
+		body,html {
+			width: 100%; height: 100%;
+		}
+		.container {
+			position: relative;
+			width: 414px; height: 100%;
+		}
+		@media screen and (max-width:700px ){
+			.container {
+				width: 100%; height: 100%;
+			}
+		}
+		#tri, #wheel {
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		#tri {
+			background-image: url(./tri.png);
+			top: 40%; left: 20%;
+			width: 60%; height: 50%;
+		}
+		#wheel {
+			background-image: url(./wheel.png);
+			top: 15%; left: 10%;
+			width: 80%;
+			animation: wheelani 24s 0 linear infinite;
+		}
+		@keyframes wheelani {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		.wheel span {
+			position: absolute;
+			width: 14%; height: 12%;
+			left: 43%;
+			background-image: url("./single.png");
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			animation: cabinani 24s 0 linear infinite;
+			transform-origin: center 0;
+		}
+		@keyframes cabinani{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(-360deg);
+			}
+		}
+		#cabin1 {
+			top: 5%;
+		}
+		#cabin2 {
+			top: 8%; left: 60%;
+		}
+		#cabin3 {
+			top: 18%; left: 74%;
+		}
+		#cabin4 {
+			top: 32%; left: 84%;
+		}
+		#cabin5 {
+			top: 50%; left: 88%;
+		}
+		#cabin6 {
+			top: 67%; left: 84%;
+		}
+		#cabin7 {
+			top: 82%; left: 75%;
+		}
+		#cabin8 {
+			top: 92%; left: 60%;
+		}
+		#cabin9 {
+			top: 95%;
+		}
+		#cabin10 {
+			top: 91%; left: 25%;
+		}
+		#cabin11 {
+			top: 82%; left: 11%;
+		}
+		#cabin12 {
+			top: 67%; left: 1%;
+		}
+		#cabin13 {
+			top: 50%; left: -2%;
+		}
+		#cabin14 {
+			top: 32%; left: 2%;
+		}
+		#cabin15 {
+			top: 18%; left: 12%;
+		}
+		#cabin16 {
+			top: 8%; left: 26%;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div id="tri"></div>
+	<div id="wheel">
+		<span id="cabin1"></span>
+		<span id="cabin2"></span>
+		<span id="cabin3"></span>
+		<span id="cabin4"></span>
+		<span id="cabin5"></span>
+		<span id="cabin6"></span>
+		<span id="cabin7"></span>
+		<span id="cabin8"></span>
+		<span id="cabin9"></span>
+		<span id="cabin10"></span>
+		<span id="cabin11"></span>
+		<span id="cabin12"></span>
+		<span id="cabin13"></span>
+		<span id="cabin14"></span>
+		<span id="cabin15"></span>
+		<span id="cabin16"></span>
+	</div>
+</div>
+	<script type="text/javascript">
+		var wheel = document.getElementById("wheel");
+		wheel.style.height = wheel.clientWidth + "px";
+	</script>
+</body>
+</html>
